@@ -107,7 +107,7 @@ export default {
                   class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
                 >
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/17640b0c-8132-4084-8fdb-cae33518f795/dealn8o-b6d74e0b-4e18-48e9-8d42-0be8329b2c7e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjQwYjBjLTgxMzItNDA4NC04ZmRiLWNhZTMzNTE4Zjc5NVwvZGVhbG44by1iNmQ3NGUwYi00ZTE4LTQ4ZTktOGQ0Mi0wYmU4MzI5YjJjN2UuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5kiYnXGFsaNgJtw_QiiZmYNwmzDdwBH9AfJUN21Vrdc"
                     class="img-fluid"
                     alt="Sample image"
                   />

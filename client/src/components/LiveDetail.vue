@@ -4,12 +4,26 @@
 export default {
   name: "LiveDetail",
   props: ["live"],
+  data() {
+    return {
+      yt_url: `https://www.youtube.com/embed/${this.live.yt_video_key}`,
+    };
+  },
 };
 </script>
 <template>
   <div v-if="live">
     <div class="container">
       <div class="row">
+        <iframe
+          width="400"
+          height="441"
+          :src="yt_url"
+          :title="live.title"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
         <div class="col-md-6 align-self-center">
           <h1>{{ live.title }}</h1>
           <h2>{{ live.status }}</h2>
@@ -17,7 +31,7 @@ export default {
       </div>
     </div>
   </div>
-  <div v-if="!live">
+  <div v-else-if="!live">
     <h1>No Live Streaming</h1>
   </div>
 </template>

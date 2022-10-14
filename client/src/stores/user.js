@@ -2,7 +2,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { defineStore } from "pinia";
 
-const baseUrl = "https://shirafan-1.herokuapp.com";
+const baseUrl = "https://shirafan-2.herokuapp.com";
 
 export const useUserStore = defineStore({
   id: "user",

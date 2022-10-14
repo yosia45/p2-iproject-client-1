@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const baseUrl = "https://shirafan-1.herokuapp.com";
+const baseUrl = "https://shirafan-2.herokuapp.com";
 
 export const usePaymentStore = defineStore({
   id: "payment",
@@ -21,15 +21,19 @@ export const usePaymentStore = defineStore({
             access_token: localStorage.getItem("access_token"),
           },
         });
+        var ini = this;
         window.snap.pay(data.token, {
           onSuccess(result) {
-            this.updateStatusHandler(result.order_id);
-            this.router.push("/");
+            console.log(result);
+            ini.updateStatusHandler(result.order_id);
+            ini.router.push("/");
             Swal.fire(
               "Payment Success",
               "Thank you for supporting us!",
               "success"
             );
+            localStorage.removeItem("accountStatus")
+            localStorage.setItem("accountStatus",'Premium')
           },
           onError(result) {
             Swal.fire("Payment Failed", "", "error");
@@ -41,6 +45,7 @@ export const usePaymentStore = defineStore({
       }
     },
     async updateStatusHandler(orderId) {
+      // console.log(orderId);
       try {
         await axios({
           url: `${baseUrl}/payments`,
@@ -51,6 +56,7 @@ export const usePaymentStore = defineStore({
           },
         });
       } catch (err) {
+        console.log(err,"dari updateStatus")
         Swal.fire(`${err.response.data.message}`, "", "error");
       }
     },
